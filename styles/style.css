@@ -572,7 +572,7 @@
     color: #3f3f40
 }
 .btn-success.btn-outline {
-    color: #F7931D
+    color: #62cb31
 }
 .btn-info.btn-outline {
     color: #3498db
@@ -671,8 +671,8 @@ fieldset[disabled] .btn-primary2.active {
     border-color: #727376;
 }
 .btn-success {
-    background-color: #F7931D;
-    border-color: #F7931D;
+    background-color: #62cb31;
+    border-color: #62cb31;
     color: #fff
 }
 .btn-success:hover,
@@ -680,8 +680,8 @@ fieldset[disabled] .btn-primary2.active {
 .btn-success:active,
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
-    background-color: #FAAB55;
-    border-color: #FAAB55;
+    background-color: #62cb31;
+    border-color: #62cb31;
     color: #fff
 }
 .btn-success:active,
