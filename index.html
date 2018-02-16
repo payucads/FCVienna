@@ -13,7 +13,7 @@
       <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css" />
       <link rel="stylesheet" href="vendor/animate.css/animate.css" />
       <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
-      <link rel="stylesheet" href="vendor/toastr/build/toastr.min.css" />
+      <link rel="stylesheet" href="vendor/sweetalert/lib/sweet-alert.css" />
       <!-- App styles -->
       <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
       <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" />
@@ -55,10 +55,10 @@ Cum cu vidit saepe, eu periculis dignissim pri. Ex duo assum mandamus perpetua. 
                             <h4>Akzeptieren Sie die allgemeinen Geschäftsbedingungen?</h4>
                           </div>
                           <div class="col-sm-6 col-md-6 col-lg-6 m-b-md">
-                            <a href="" type="button" class="btn btn-lg btn-outline btn-block btn-danger">Ich stimme nicht zu <i class="fa fa-times-circle"></i></a>
+                            <a type="button" class="btn btn-lg btn-outline btn-block btn-danger fail">Ich stimme nicht zu <i class="fa fa-times-circle"></i></a>
                           </div>
                           <div class="col-sm-6 col-md-6 col-lg-6 m-b-md">
-                            <a href="" type="button" class="btn btn-lg btn-outline btn-block btn-success">Ich stimme zu <i class="fa fa-check-circle"></i></a>
+                            <a type="button" class="btn btn-lg btn-outline btn-block btn-success success">Ich stimme zu <i class="fa fa-check-circle"></i></a>
                           </div>
                         </div>
                      </div>
@@ -91,9 +91,44 @@ Cum cu vidit saepe, eu periculis dignissim pri. Ex duo assum mandamus perpetua. 
       <script src="vendor/metisMenu/dist/metisMenu.min.js"></script>
       <script src="vendor/iCheck/icheck.min.js"></script>
       <script src="vendor/sparkline/index.js"></script>
-      <script src="vendor/toastr/build/toastr.min.js"></script>
+      <script src="vendor/sweetalert/lib/sweet-alert.min.js"></script>
       <!-- App scripts -->
       <script src="scripts/homer.js"></script>
+
+      <script>
+      $(function () {
+
+        $('.success').click(function(){
+            swal({
+                title: "Großartig!",
+                text: "Sie haben zugestimmt!",
+                type: "success",
+                confirm: false
+            });
+            document.location.replace('https://payuca.com');
+        });
+
+        $('.fail').click(function () {
+            swal({
+                title: "Sind Sie sicher?",
+                text: "Sie können dieses Tool nicht verwenden, wenn Sie die AGB nicht akzeptieren.",
+                type: "warning",
+                showCancelButton: true,
+                cancelButtonText: "Schließen",
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Ja, ich stimme NICHT zu!",
+                closeOnConfirm: false,
+                closeOnCancel: true },
+                function (isConfirm) {
+                  if (isConfirm) {
+                    document.location.replace('https://payuca.com');
+                  }
+            });
+
+        });
+
+      });
+      </script>
 
    </body>
 </html>
