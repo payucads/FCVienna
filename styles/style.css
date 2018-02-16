@@ -1157,7 +1157,7 @@ a.list-group-item.active:focus {
     cursor: pointer
 }
 .hpanel.hgreen .panel-body {
-    border-top: 2px solid #F7931D
+    border-top: 2px solid #62cb31
 }
 .hpanel.hblue .panel-body {
     border-top: 2px solid #3498db
@@ -4119,49 +4119,57 @@ body.light-skin.fixed-footer .footer {
     margin-top: 3%
 }
 
-@media (min-width: 992px) {
-    img.nfc {
-        /* Rotate div */
-        -ms-transform: rotate(15deg); /* IE 9 */
-        -webkit-transform: rotate(15deg); /* Safari 3-8 */
-        transform: rotate(15deg);
-        width: 15%;
+.pulse-button {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(238, 157, 24, 0.7);
+    border-radius: 50%;
+    background-color: #F39200;
+    background-image: url(../images/landing/open_door.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 3.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 3.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 3.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.pulse-button:hover {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+}
+
+@-webkit-keyframes pulse {
+    to {
+      box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
     }
 }
 
-@media (max-width: 768px) {
-    img.nfc {
-        /* Rotate div */
-        -ms-transform: rotate(15deg); /* IE 9 */
-        -webkit-transform: rotate(15deg); /* Safari 3-8 */
-        transform: rotate(15deg);
-        width: 35%;
+    @-moz-keyframes pulse {
+    to {
+      box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+    }
+}
+
+    @-ms-keyframes pulse {
+    to {
+      box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+    }
+}
+
+    @keyframes pulse {
+    to {
+      box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
     }
 }
 
 #agb {
   height: 100%;
-}
-
-.footermenu {
-    padding-bottom: 5px;
-    font-size: 13px;
-    color: #6a6c6f;
-    border-bottom: 1px solid #eaeaea
-}
-
-.footermenu-last {
-    padding-bottom: 5px;
-    font-size: 13px;
-    color: #6a6c6f
-}
-
-.footermenu:hover {
-    color: #F7931D
-}
-
-.footermenu-last:hover {
-    color: #F7931D
 }
 
 #footer {
